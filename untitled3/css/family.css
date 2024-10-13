@@ -1,0 +1,377 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  line-height: 1;
+  background-color: #121212;
+}
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Стили для навигационного меню */
+header {
+  padding-top: 40px;
+
+}
+.wrapper{
+  width: 1200px;
+  margin: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+.header_menu{
+  display: none;
+}
+
+/* Стили для основного раздела */
+main {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+footer {
+  padding: 100px 0;
+  align-items: center;
+  text-align: center;
+  background-color: #2f2c2c;
+  color: white;
+}
+.nav-contact-sites{
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+
+.family {
+  padding: 100px;
+  text-align: center;
+}
+
+h1 {
+  color: coral;
+  margin-bottom: 100px;
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.family-grid {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+/* Стили для каждого члена семьи */
+.family-member {
+  width: 200px;
+  text-align: center;
+}
+
+/* Стили контейнера изображения */
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Стили наложения для текста, который появляется при ховере */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Показ текста при наведении */
+}
+
+/* Стили для имени под изображением */
+.family-member h2 {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+.member_information{
+  margin: 150px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.information_container{
+  text-align: left;
+  width: 450px;
+}
+.member_information h2 {
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 600;
+}
+.member_information img{
+  height: 500px;
+  border-radius: 10px;
+}
+@media (max-width: 1280px ) and (max-height:800px) {
+  .wrapper{
+    width: 900px;
+  }
+  h1{
+    font-size: 56px;
+    margin-bottom: 75px;
+  }
+  .member_information img {
+    height: 350px;
+  }
+  .member_information{
+    margin: 50px 0;
+    transition: 1s;
+  }
+  .member_information:hover{
+    transform: scale(1.1);
+  }
+  .information_container{
+    text-align: left;
+    width: 400px;
+  }
+  .family-member {
+    width: 200px;
+  }
+  .family-grid {
+    gap: 30px;
+    margin-bottom: 150px;
+  }
+  .family {
+    padding: 50px 0;
+    text-align: center;
+  }
+
+}
+@media (max-width: 1024px ) and (min-height: 800px){
+  .wrapper{
+    width: 700px;
+  }
+  .nav-links a {
+    font-size: 24px;
+  }
+  .nav-links{
+    gap: 20px;
+  }
+  h1{
+    font-size: 48px;
+    margin-bottom: 75px;
+  }
+  .family-member h2{
+    font-size: 64px;
+  }
+  p{
+    font-size: 18px;
+  }
+  .member_information img {
+    height: 300px;
+  }
+  .member_information{
+    margin: 50px 0;
+    transition: 1s;
+  }
+  .member_information:hover{
+    transform: scale(1.1);
+  }
+  .information_container{
+    text-align: left;
+    width: 400px;
+  }
+  .family-member:first-child{
+    display: block;
+    width: 400px;
+  }
+  .family-member {
+    display: none;
+  }
+  .family-grid {
+    gap: 30px;
+    margin-bottom: 150px;
+  }
+  .family {
+    padding: 100px 0;
+    text-align: center;
+  }
+
+}
+@media (max-width: 540px) {
+  .wrapper{
+    width: 350px;
+  }
+  header{
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
+  .nav-links{
+    display: none;
+  }
+  .header_menu{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+  }
+  h1{
+    font-size: 32px;
+    margin-bottom: 75px;
+  }
+  .family-member h2{
+    font-size: 48px;
+  }
+  .member_information h1{
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .member_information p{
+    font-size: 16px;
+  }
+  p{
+    font-size: 24px;
+  }
+  .member_information img {
+    height: 400px;
+  }
+  .member_information{
+    flex-direction: column;
+    margin: 100px 0;
+    transition: none;
+  }
+  .member_information:last-child{
+    margin-bottom: 0;
+  }
+
+  .information_container{
+    text-align: center;
+    width: 300px;
+  }
+  .family-member:first-child{
+    display: block;
+    width: 270px;
+  }
+  .family-member {
+    display: none;
+  }
+  .family-grid {
+    margin-bottom: 150px;
+  }
+  .family {
+    padding: 40px 0;
+    text-align: center;
+  }
+  footer{
+    padding: 0;
+  }
+  .nav-contact-sites{
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+
+
+}

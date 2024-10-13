@@ -1,0 +1,372 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  line-height: 1;
+  background-color: #121212;
+}
+/* Общие стили */
+* {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Стили для навигационного меню */
+header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+
+}
+.wrapper{
+  width: 1200px;
+  margin: auto;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+.header_menu{
+  display: none;
+}
+
+/* Стили для основного раздела */
+main {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+footer {
+  padding: 100px 0;
+  align-items: center;
+  text-align: center;
+  background-color: #2f2c2c;
+  color: white;
+}
+.nav-contact-sites{
+  justify-content: center;
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+.hobby_section h1{
+  margin-top: 5vh;
+  font-size: 64px;
+  font-weight: 800;
+  color: coral;
+}
+.hobbies_list{
+  margin: auto;
+  border-radius: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.hobby_section.wrapper{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 900px;
+  text-align: left;
+}
+.hobby_type{
+  border-radius: 40px;
+  background-color: #2f2c2c;
+  margin: 10px 0;
+  text-align: left;
+  width: 430px;
+  padding: 20px;
+}
+.hobby_type h3 {
+  margin: 10px 0 20px;
+  color: #FFEA9F;
+  font-size: 24px;
+  font-weight: 600;
+
+}
+.hobby_type p{
+  font-size: 16px;
+}
+.hobby_icon{
+  background-color: #DCDCDC;
+  border-radius: 50%;
+  width: 50px;
+}
+.icon{
+  position: relative;
+}
+.icon button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px 20px;
+  background-color:transparent ;
+  font-size: 18px;
+  font-weight: 600;
+  color: #FFEA9F;
+  border-radius: 30px;
+  border: 2px solid #FFEA9F;
+}
+.gallery_section.wrapper{
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+.gallery_section h3{
+  margin-top: 10px;
+  color: coral;
+  font-size: 24px;
+  line-height: 1.5;
+}
+.gallery_section p{
+  font-size: 16px;
+  width: 250px;
+}
+.hobby_gallery{
+  margin: 10vh 0 10vh 50px;
+  display: grid;
+  max-width: 38vw;
+  row-gap: 1vw;
+  column-gap: 1vw;
+}
+.hobby_gallery img{
+  border-radius: 20px;
+}
+.gallery_img1{
+  width: 25vw;
+  grid-row: 1 /span 2;
+  grid-column: 1 /span 2;
+}
+.gallery_img2{
+  width: 12vw;
+  grid-row: 1;
+  grid-column: 3;
+}
+.gallery_img3{
+  height: 17.8vw;
+  width: 12vw;
+  grid-row: 2 /span 3;
+  grid-column: 3;
+}
+.gallery_img4{
+  width: 12vw;
+  grid-row: 3;
+  grid-column: 2;
+}
+.gallery_img5{
+  width: 12vw;
+  grid-row: 3;
+  grid-column: 1;
+}
+.gallery_img6{
+  width: 12vw;
+  height: 17.8vw;
+  grid-row: 4 /span 5;
+  grid-column: 1;
+}
+.gallery_img7{
+  width: 25vw ;
+  grid-row: 4 /span 5;
+  grid-column: 2 /span 3;
+}
+@media (max-width: 1280px) {
+  .wrapper{
+    width: 900px;
+  }
+  .hobby_section h1{
+    font-size: 48px;
+  }
+  .hobbies_list{
+    border-radius: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .hobby_type{
+    border-radius: 40px;
+    background-color: #2f2c2c;
+    margin: 10px 0;
+    text-align: left;
+    width: 430px;
+    padding: 20px;
+  }
+  .hobby_type h3 {
+    margin: 10px 0 20px;
+    color: #FFEA9F;
+    font-size: 18px;
+    font-weight: 600;
+
+  }
+  .hobby_type p{
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .wrapper{
+    width: 80vw;
+  }
+  .hobby_section.wrapper{
+    width: 80vw;
+  }
+  .gallery_section.wrapper{
+    width: 80vw;
+  }
+  .hobby_type{
+    margin: 10px 0;
+    width: 100%;
+    padding: 20px;
+  }
+  .gallery_section.wrapper{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .gallery_section h3{
+    margin-top: 10px;
+    color: coral;
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  .gallery_section p{
+    width: 100%;
+  }
+  .hobby_gallery{
+    padding: 0;
+    margin: 50px 0;
+    display: grid;
+    width: 80vw;
+    row-gap: 1vw;
+    column-gap: 1vw;
+  }
+  .gallery_img1{
+    width: 49vw;
+  }
+  .gallery_img2{
+    width: 24vw;
+  }
+  .gallery_img3{
+    height: 35vw;
+    width: 24vw;
+  }
+  .gallery_img4{
+    width: 24vw;
+  }
+  .gallery_img5{
+    width: 24vw;
+  }
+  .gallery_img6{
+    width: 24vw;
+    height: 35vw;
+  }
+  .gallery_img7{
+    width: 49vw ;
+  }
+}
+@media (max-width: 540px) {
+  .wrapper{
+    width: 90vw;
+  }
+  .hobby_section.wrapper{
+    height: max-content;
+    width: 90vw;
+  }
+  .gallery_section.wrapper{
+    height: max-content;
+    width: 71vw;
+  }
+  header{
+    top: 0;
+    left: 0;
+    padding: 0;
+  }
+  .nav-links{
+    display: none;
+  }
+  .header_menu{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+  }
+
+}

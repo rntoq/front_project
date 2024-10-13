@@ -1,0 +1,359 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Medium.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Usually-font-Bold';
+  src: url("/img/static/Montserrat-Regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  line-height: 1;
+  background-color: #121212;
+}
+/* Общие стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Стили для навигационного меню */
+header {
+  margin-top: 40px;
+  padding: 10px 0;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+.header_menu{
+  display: none;
+}
+.nav-links a {
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+main {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+footer {
+  background-color: #2f2c2c;
+  padding: 100px 0 100px 0;
+}
+.intro_block{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.mini_title{
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 10px;
+}
+.intro_title{
+  color: coral;
+  font-size: 64px;
+  font-weight: 800;
+}
+.intro_subtitle{
+  margin-top: 40px;
+  width: 560px;
+}
+.intro_map{
+  margin-top: 30px;
+  width: 400px;
+}
+
+.wrapper{
+  width: 1200px;
+  margin: auto;
+}
+.intro_img{
+
+  border-radius: 10%;
+  height: 480px;
+  object-fit: cover;
+  border: 10px solid #232323;
+  transition: 0.5s;
+}
+.intro_img:hover{
+  transform: scale(1.1);
+}
+.intro_message{
+  margin: 100px 160px;
+  padding: 20px 50px;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid yellow;
+}
+.message_title{
+  font-size: 64px;
+  font-weight: 800;
+}
+.message_subtitle{
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.nav-contact-sites{
+  justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 1280px ) {
+  .wrapper {
+    max-width: 900px;
+  }
+  .intro_title {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  .mini_title {
+    font-size: 18px;
+  }
+  .intro_subtitle {
+    margin-top: 0;
+    font-size: 18px;
+    width: 440px;
+  }
+  .intro_map {
+    width: 320px;
+  }
+  .intro_message {
+    margin: 100px 80px;
+    padding: 10px 40px;
+  }
+  .message_title {
+    font-size: 40px;
+  }
+  .message_subtitle {
+    margin-top: 10px;
+  }
+  footer {
+    padding-top: 50px;
+  }
+  .intro_img {
+    width: 280px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+@media  (max-width: 1024px) {
+  .wrapper{
+    max-width: 720px;
+  }
+  .nav-links{
+    gap: 20px;
+    font-size: 16px;
+  }
+  main{
+    padding-top: 20px;
+  }
+  .intro{
+    justify-content: center;
+  }
+  .intro_block{
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  .intro_title{
+    font-size: 50px;
+    margin-bottom: 80px;
+  }
+  .mini_title{
+    font-size: 24px;
+  }
+  .intro_subtitle{
+    font-size: 18px;
+    margin: auto;
+  }
+  .intro_text{
+    text-align: center;
+  }
+  .intro_map{
+    margin-top: 180px;
+    width: 700px;
+    margin-bottom: 500px;
+  }
+  .intro_pic{
+    margin: 0 auto;
+  }
+  .intro_img{
+    width: 480px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px ;
+  }
+
+  .intro_message{
+    width: 640px;
+    margin:0 auto;
+  }
+  .message_title{
+    font-size: 50px;
+  }
+  .message_subtitle{
+    font-size: 16px;
+  }
+  footer{
+    margin-top: 20px;
+    padding: 50px 0 50px;
+  }
+}
+@media  (min-height: 1024px)  {
+  .intro_img{
+    width: 480px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px ;
+  }
+
+}
+@media screen and (max-width: 540px){
+  .wrapper {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 350px;
+  }
+  header{
+    margin-top: 20px;
+    left: 0;
+    top: 0;
+    padding: 0;
+  }
+  .header_menu{
+    width: 50px;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .intro_block{
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .nav-links{
+    display: none;
+    height: 0;
+  }
+  .intro_title {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .mini_title {
+    font-size: 24px;
+  }
+  .intro_subtitle {
+    margin-top: 0;
+    font-size: 16px;
+    width: 300px;
+  }
+  .intro_map {
+    margin-top: 50px;
+    margin-bottom: 200px;
+    width: 300px;
+  }
+  .intro_message {
+    width: 350px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .message_title {
+    font-size: 32px;
+  }
+  .message_subtitle {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  .nav-contact-sites{
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  footer {
+    padding: 0;
+  }
+  .intro_img {
+    border-radius: 10%;
+    width: 320px;
+    object-fit: cover;
+    border: 5px solid #232323;
+  }
+}
